@@ -1,33 +1,28 @@
 [![make.fun · news-image-20261124](https://make.fun/badge/news-image-20261124.svg)](https://make.fun/bounty/news-image-20261124?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261124)
-[![rank](https://make.fun/badge/news-image-20261124/inifikry/news-image-24-makefun/rank.svg)](https://make.fun/bounty/news-image-20261124/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261124)
-[![reward](https://make.fun/badge/news-image-20261124/inifikry/news-image-24-makefun/reward.svg)](https://make.fun/bounty/news-image-20261124?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261124)
+[![make.fun · rank](https://make.fun/badge/news-image-20261124/inifikry/news-image-24-makefun/rank.svg)](https://make.fun/bounty/news-image-20261124/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261124)
+[![make.fun · reward](https://make.fun/badge/news-image-20261124/inifikry/news-image-24-makefun/reward.svg)](https://make.fun/bounty/news-image-20261124?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261124)
 
-# The World Today — 24 November 2026
+# The World Today — Tuesday, 24 November 2026
 
-A newspaper front page summing up the world's news of Tuesday, 24 November
-2026, drawn purely with Pillow. Entry for the make.fun bounty
-[news-image-20261124](https://make.fun/c/news-image-20261124)
-($100, blind rounds, judged by an AI picture editor).
+A one-page newspaper front page that sums up 24 November 2026's world
+news in a single 1024x1024 image, drawn entirely with Pillow (no AI
+text, no network at runtime).
 
-## Stories
+34 stories across 8 regions and 9 topics: 3 lead stories with drawn
+illustrations, 12 picture cards, a world map with numbered pins, and a
+19-item IN BRIEF list. A big-numbers strip, a coverage strip, a DATE
+CHECK box (big stories left out because they happened on another day),
+a WHAT WE DON'T KNOW YET box, and a HOW SURE legend round it out.
 
-- **Lead — Russian jets spark Korea alert.** Seoul scrambled fighter jets
-  after Russian warplanes entered South Korea's air-defence zone on Tuesday
-  morning; residents of Ulleung island were briefly told to take shelter.
-- **Trump, Putin meet in Anchorage today.** High-stakes summit on the
-  Ukraine war as the two leaders sit down face to face in Alaska.
-- **Storms threaten holiday getaway.** Storms and airline glitches threaten
-  a messy Thanksgiving week for travellers in the US.
-- **24 confirmed dead in factory fire.** Families await DNA tests after the
-  Cikande candy plant blaze in Indonesia; dozens still missing.
-- **Also today:** UN chief calls for AI risk rules within a year; Nepal's PM
-  in Delhi for energy and trade talks; Ibaraki holds its first
-  nuclear-waste survey briefing; Thai court upholds its verdict for an
-  opposition MP.
+Every story is dated 24 November 2026 in its local time zone, with
+named sources. See BUILD_REPORT.md for the full story list with date
+evidence.
 
-## How it works
+## Run
 
-`draw_frontpage.py` draws `entry.png` (1024x1024 PNG) with Pillow — no
-network, no AI-generated text. `main.py` (Python 3.13, standard library
-only) copies `entry.png` to `/output/entry.png`; running it twice writes
-byte-identical output.
+```
+python3 draw_frontpage_v2.py   # draws entry.png
+python3 main.py                # copies entry.png to /output/entry.png
+```
+
+`main.py` is deterministic: two runs produce byte-identical output.
